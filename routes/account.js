@@ -9,7 +9,7 @@ var iota = new IOTA({
 
 router.post('/', function(req, res) {
 
-    iota.api.getAccountData(req.body.seed, function(error, success) {
+    iota.api.getInputs(req.body.seed, function(error, success) {
         if (error) {
             res.status(400).json(error);
         } else {
