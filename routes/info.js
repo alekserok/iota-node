@@ -11,7 +11,7 @@ router.post('/', function(req, res) {
 
   iota.api.getNodeInfo(function(error, success) {
     if (error) {
-        res.status(400).json(error);
+        res.status(400).json(error.toString());
     } else {
         res.json(success)
     }
