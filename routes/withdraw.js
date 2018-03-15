@@ -9,7 +9,7 @@ var iota = new IOTA({
 
 router.post('/', function(req, res) {
 
-    const transfers = [
+    var transfers = [
         {
             // Recipient address
             address: req.body.address,
@@ -19,6 +19,15 @@ router.post('/', function(req, res) {
             tag: ''
         }
     ];
+
+    if (req.body.commission)
+        transfers.push({
+            address: req.body.commissionAddress,
+            value: parseInt(req.body.commission),
+            message: req.body.message,
+            tag: ''
+        });
+
 
     const options = [];
 
