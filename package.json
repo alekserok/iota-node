@@ -1,10 +1,11 @@
 {
-  "name": "iota-node",
+  "name": "iota-node-middleware",
   "version": "1.0.0",
-  "description": "iota payments rest application",
+  "description": "iota payments application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "alekserok",
   "license": "ISC",
