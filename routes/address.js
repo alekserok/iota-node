@@ -13,7 +13,7 @@ router.post('/', function(req, res) {
         if (error) {
             res.status(400).json(error.toString());
         } else {
-            res.json(success)
+            res.json(iota.utils.addChecksum(success));
         }
     });
 });
